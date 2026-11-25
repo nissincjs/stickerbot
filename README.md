@@ -19,7 +19,27 @@ StickerBot é um bot de figurinhas com uma vasta gama de comandos. Ele pode:
 
 - **Administração de Grupo:** Comandos para gerenciar e moderar grupos.
 - **Criação de Figurinhas:** Transforme imagens, vídeos e textos em figurinhas personalizadas.
+- **Figurinha com Áudio:** Crie figurinha animada com o som do próprio vídeo (`!figaudio`).
 - **Diversão:** Baixe músicas do YouTube diretamente pelo WhatsApp.
+
+## 🎵 Figurinha com áudio (sound sticker)
+
+Responda a um **vídeo com som** com `!figaudio` (ou envie o vídeo com esse comando na legenda) para receber uma figurinha animada com o áudio do vídeo.
+
+| Comando | O que faz |
+|---|---|
+| `!figaudio` | Figurinha animada com o áudio do vídeo respondido |
+| `!figsom` / `!audiosticker` / `!figurinhaaudio` | Apelidos do mesmo comando |
+
+> ⚠️ **Recurso novo e não-oficial.** O WhatsApp liberou as figurinhas com som recentemente e ainda está em rollout. Pode não tocar em aparelhos antigos ou no iOS; nesse caso o bot envia a figurinha e o áudio separados automaticamente (`SB_AUDIO_STICKER_FORCE_FALLBACK=true` força esse modo para testes).
+
+Limites: vídeos de até **10 segundos** (o restante é cortado) e figurinha de até ~490 KB (o encoder reduz qualidade/FPS automaticamente).
+
+Requisitos: `ffmpeg` no PATH com os codecs `libwebp` e `libopus`.
+
+Para desativar o comando: `SB_AUDIO_STICKER=false`.
+
+Crédito pela descoberta da técnica de sound sticker: Yusro GTG.
 
 ## 📦 Instalação
 
