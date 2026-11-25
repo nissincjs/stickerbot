@@ -7,6 +7,7 @@
     "start": "npx tsx ./src/bot.ts",
     "dev": "npx tsx ./src/bot.ts --skip-unread --dev",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "test:audio-sticker": "npx tsx ./scripts/audio-sticker-selftest.ts",
     "format": "npx eslint ./src --ext .ts --fix",
     "lint": "npx eslint ./src --ext .ts",
     "build": "tsc",

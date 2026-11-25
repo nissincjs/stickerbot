@@ -46,6 +46,10 @@ export const bot = {
   groupsAddPrivacy: process.env.SB_GROUPS_ADD_PRIVACY as WAPrivacyGroupAddValue || 'contact_blacklist',
   defaultDisappearingMode: parseInt(process.env.SB_DEFAULT_DISAPPEARING_MODE || '604800') as number,
   sendWarnings: JSON.parse(process.env.SB_SEND_WARNINGS || 'true') as boolean,
+  // Figurinha animada com som (sound sticker). Recurso novo e não-oficial do WhatsApp
+  audioStickerEnabled: JSON.parse(process.env.SB_AUDIO_STICKER || 'true') as boolean,
+  // Envia figurinha + áudio separados (útil para testar o fallback)
+  audioStickerForceFallback: JSON.parse(process.env.SB_AUDIO_STICKER_FORCE_FALLBACK || 'false') as boolean,
   refuseCalls: JSON.parse(process.env.SB_REFUSE_CALLS || 'false') as boolean,
   vipSystem: JSON.parse(process.env.SB_VIP_SYSTEM || 'false') as boolean,
   forceCommunity: JSON.parse(process.env.SB_FORCE_COMMUNITY || 'false') as boolean,
